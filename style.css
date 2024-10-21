@@ -1,0 +1,790 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Base font size */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0rem 0rem; /* Using rem for padding */
+    
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    bottom: 87%;
+}
+
+header.transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.logo img {
+    width: 11.999rem; /* Using rem for logo width */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem; /* Using rem for gap */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; /* 1rem = 16px */
+    padding-bottom: 0rem; /* Padding bottom for underbar effect */
+    transition: color 0.3s ease;
+    
+}
+
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.225rem; /* Underline thickness */
+    background: #f5a623;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #f5a623;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+section {
+    padding: -1rem -2rem; /* Equal to 100px */
+    min-height: 100vh;
+    margin-left: 0;
+    overflow: hidden;
+}
+
+#home {
+    background-color: lightgray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding-top: 4.75rem;
+}
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;  
+}
+
+.slides {
+    display: flex;
+    width: 500%; /* 5 slides */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    width: 70vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.slide {
+    min-width: 100vw; /* Each slide takes the full width */
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark box for text */
+    padding: 1rem;
+    text-align: center;
+    width: 60%;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Arrow button background */
+    cursor: pointer;
+    border: none;
+}
+
+.prev {
+    left: 2%;
+}
+
+.next {
+    right: 2%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Navigation dots */
+.dots {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content {
+        width: 80%;
+    }
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 48rem) { /* 48rem = 768px */
+    header {
+        padding: 0.225rem 1.25rem; /* Adjusting padding for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.525rem;
+    }
+
+    nav a {
+        font-size: 0.5rem; /* Slightly larger font size for better readability */
+    }
+
+    .logo img {
+        width: 4.25rem; /* Adjust logo size on mobile screens */
+    }
+}
+
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+    margin: 0;
+    padding: 0;
+}
+
+.responsive-section {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 5vw; /* Use relative units for responsive padding */
+    text-align: center; /* Center align text */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 2vw; /* Additional padding for smaller screens */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Responsive font size */
+    color: #333; /* Dark text color */
+    margin-bottom: 1.5rem; /* Space below the title */
+}
+
+.section-description {
+    font-size: 1.2rem; /* Responsive font size */
+    color: #666; /* Medium text color */
+    margin-bottom: 2rem; /* Space below the paragraph */
+}
+
+.cta-button {
+    display: inline-block; /* Display button inline */
+    padding: 1rem 2rem; /* Responsive padding for the button */
+    font-size: 1.2rem; /* Responsive font size */
+    color: #fff; /* White text color */
+    background-color: #007BFF; /* Primary color for button */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition effect for hover */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem; /* Smaller title font for mobile */
+    }
+
+    .section-description {
+        font-size: 1rem; /* Smaller description font for mobile */
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem; /* Smaller padding for button */
+        font-size: 1rem; /* Smaller font size for button */
+    }
+}
+
+/* Services Section */
+#services {
+    background-color: #333;
+    padding: 2rem 0;
+    text-align: center;
+    overflow: hidden; /* Ensure overflow is hidden for the drop-in effect */
+}
+
+/* Animation Keyframes for Dropping */
+@keyframes dropIn {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.services-heading {
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+    color: rgb(250, 247, 247);
+    animation: dropIn 1s ease forwards; /* Apply drop-in animation */
+    text-align: center;
+}
+
+.services-paragraph{
+    font-size: 1.25rem;
+    color: #ffffff;
+    line-height: 1.5rem;
+    text-align: center;
+    animation: dropIn 1.2s ease forwards; /* Apply animation with slight delay */
+}
+
+/* Dropdown Box Styling */
+.service-dropdown {
+    margin: 2rem 20rem;
+    background-color: #000000;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: all 0.4s ease; /* Smooth transition on hover */
+    animation: dropIn 1.5s ease forwards; /* Apply drop-in animation */
+    opacity: 0; /* Initially hidden until animation triggers */
+}
+
+/* Add delay to dropdowns for staggered effect */
+.service-dropdown:nth-child(2) {
+    animation-delay: 0.3s; /* Slight delay for dropdown */
+}
+
+.service-dropdown:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.service-dropdown:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* Dropdown Header */
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #01b2ed;
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.dropdown-header:hover {
+    background-color: #fffefe;
+    color: rgb(0, 0, 0); /* Text color changes on hover */
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease; /* Icon color transition */
+}
+
+.arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease; /* Smooth rotation of arrow */
+    color: #000000;
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    color: #ffffff;
+    line-height: 200%;
+    font-weight: bold;
+    visibility: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease; /* Smooth open and close transition */
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+/* Active State for Dropdown */
+.service-dropdown.active .dropdown-content {
+    max-height: 200px; /* Adjust max height for better visibility */
+    opacity: 1;
+    padding: 1rem;
+    visibility: visible;
+    transition: max-height 0.6s ease, opacity 0.6s ease, visibility 0.6s ease; /* Smooth dropdown effect */
+}
+
+/* Arrow rotates on dropdown open */
+.service-dropdown.active .arrow {
+    transform: rotate(180deg); /* Smooth rotation for arrow */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.225rem 1.25rem;
+    }
+
+    .logo img {
+        width: 4.25rem;
+    }
+
+    nav ul {
+        gap: 0.525rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    #services {
+        margin-top: 2rem;
+    }
+
+    .services-heading {
+        font-size: 1.5em;
+        margin-bottom: 1rem;
+    }
+
+    .service-dropdown {
+        padding: 0.5rem;
+        margin: 1rem 5rem; /* Adjust margin for mobile responsiveness */
+    }
+
+    .dropdown-header {
+        padding: 0.8rem;
+    }
+
+    .icon {
+        margin-right: 8px;
+        font-size: 1.2rem;
+    }
+
+    .dropdown-content p {
+        font-size: 0.85rem;
+        margin: 0.8rem 0;
+    }
+}
+
+/*who we are Styling */
+
+
+#Whoweare {
+    position: relative;
+    height: 45vh;
+    background: url('images/wwrbg.jpg') no-repeat center center/cover; /* Add your image here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: 100%
+}
+
+.heading {
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20%;
+    padding-top: 12rem;
+   
+}
+
+/* Content Section Styling */
+.content-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #646464;
+    margin-top: -50vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* Paragraph */
+.paragraph {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #000000;
+    font-style: inherit;
+    text-align: 10%;
+    padding-bottom: 5rem;
+}
+
+.video {
+    padding-top: 10rem;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bdbdbd;
+}
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#aboutus {
+    background-color: #333;
+    transition: 0.3ms;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 2rem 2rem;
+}
+
+.about-us-container h1{
+text-align: center;
+font-size: 3rem;
+padding-top: 1%;
+}
+
+.about-us-container h2{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Zigzag Layout */
+.about-us-item {
+    display: flex;
+    align-items: center;
+}
+
+.about-us-item.left {
+    flex-direction: row; /* Image on the left */
+}
+
+.about-us-item.right {
+    flex-direction: row-reverse; /* Image on the right */
+}
+
+.about-us-item img {
+    width: 50%; /* Adjust as needed */
+    max-width: 300px; /* Ensure a max size */
+    margin: 0 1rem; /* Spacing */
+}
+
+/* Text Styling */
+.about-us-text {
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 1rem; /* Spacing */
+    line-height: 2rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Active class to trigger fade-in */
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body, html {
+    margin: 0;
+    padding: -5rem;
+    font-family: Arial, sans-serif;
+    background-color: #424242;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #fffdfd;
+}
+
+/* Contact Us Section */
+#contact-us {
+    padding: -5%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+    background-color: #424242;
+    padding: 2%;
+    padding-top: 7%;
+    border-radius: 2%;
+    padding-bottom: 0%;
+}
+
+.contact-form {
+  
+    background-color: #2f2f2f;
+    padding: 2%;
+    box-shadow: 0% 4% 8% rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+    flex-basis: 40%;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 10px;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea{
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #70e0ff;
+    color: #585858;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #4cae4c;
+}
+
+/* Right side: Contact details */
+.contact-details {
+    flex-basis: 50%;
+    padding-left: 0;
+    padding-top: -1%;
+    text-align: center;
+    
+}
+
+.info-box {
+    margin-bottom: 60px;
+}
+
+.info-box h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: -5%;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.info-box {
+    margin-top: 20px;
+}
+
+.info-box a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.info-box a:hover {
+    color: #3e82ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-details {
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    .contact-details {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Styles for the "Why Choose Us" section */
+#why-choose-us {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#why-choose-us h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .features-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .feature-item p {
+        font-size: 1em;
+    }
+
+    #why-choose-us h2 {
+        font-size: 2em;
+    }
+}
+

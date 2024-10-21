@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Logo (No px)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="main-header">
+    <div class="logo">
+        <a href="#"><img src="images/logo2.png" alt="Company Logo"> </a> <!-- Add your logo image here -->
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item active">Home</a></li>
+            <li><a href="#services" class="nav-item">Services</a></li>
+            <li><a href="#aboutus" class="nav-item">About Us</a></li>
+            <li><a href="#contactus" class="nav-item">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <section class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="images/s1.jpg" alt="Slide 1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>Are you searching for the budget-friendly software services</p>
+                    <p>You are at the right place.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="images/s2.jpg" alt="Slide 2">
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>"Your success is our mission. We deliver responsive websites, innovative apps, and creative design services at a budget-friendly price. Whether you're a shop, school, or real estate company, we make digital transformation easy and accessible."</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="images/s3.jpg" alt="Slide 3">
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>We specialize in creating affordable, high-quality websites, mobile apps, and graphic designs tailored for small businesses, shops, hospitals, schools, and more. Our goal is to help you build a strong online presence that drives growth and success.</p>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="images/s4.jpg" alt="Slide 4">
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>This is the fourth slide. Short description goes here.</p>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="images/s5.jpg" alt="Slide 5">
+                <div class="overlay"></div>
+                <div class="content">
+                    <p>This is the fifth slide. Short description goes here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <!-- Left arrow -->
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <!-- Right arrow -->
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+        <section class="responsive-section">
+            <div class="container">
+                <h2 class="section-title">Welcome to Our Services</h2>
+                <p class="section-description">
+                    We provide affordable and quality web solutions for small businesses, shops, hospitals, schools, and more. Our dedicated team works with you to create custom websites, mobile applications, and graphic designs.
+                </p>
+               
+            </div>
+        </section>
+    </section>
+</section>
+
+<section id="services">
+    <div class="services-heading">
+    <h2 class="services-heading">Our Services</h2>
+    </div>
+    <div class="services-paragraph">
+        <p>Our services are crafted to bring your business into the digital age without breaking the bank.</p>
+            <p>Whether you need a professional website, a custom mobile app, or eye-catching graphic design,</p> 
+            <p>we offer budget-friendly solutions to help you succeed.</p>
+    </div>
+
+    <div class="service-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(0)">
+           
+            <span>Web Development</span>
+            <i class="arrow">&#x25BC;</i>
+        </div>
+        <div class="dropdown-content">
+            <p>We offer responsive and custom website development services to create engaging websites for small businesses, shops, and more.</p>
+        </div>
+    </div>
+
+    <div class="service-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(1)">
+           
+            <span>Mobile App Development</span>
+            <i class="arrow">&#x25BC;</i>
+        </div>
+        <div class="dropdown-content">
+            <p>We create custom mobile apps with user-friendly interfaces for both iOS and Android platforms tailored to your business needs.</p>
+        </div>
+    </div>
+    
+    <div class="service-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(2)">
+            
+            <span>Graphic Design</span>
+            <i class="arrow">&#x25BC;</i>
+        </div>
+        <div class="dropdown-content">
+            <ul class="no-bullets">
+                <li>BRAND LOGO DESIGN</li>
+                <li>DIGITAL BANNERS</li>
+                <li>YOUTUBE THUMBNAILS</li>
+                <li>DIGITAL POSTERS</li>
+                <li>INSTAGRAM BRAND POSTS</li>
+              </ul>
+        </div>
+    </div>
+
+    <div class="service-dropdown">
+        <div class="dropdown-header" onclick="toggleDropdown(3)">
+            
+            <span>Customer Support & Maintenance</span>
+            <i class="arrow">&#x25BC;</i>
+        </div>
+        <div class="dropdown-content">
+            <p>We offer 24/7 customer support and regular maintenance services to keep your digital solutions running smoothly.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Top Section with Image -->
+<section id ="Whoweare">
+<section class="whoweare">
+    <div class="image-overlay">
+        <h1 class="heading">Who We Are</h1>
+        
+    </div>
+</section> 
+</section>
+
+<!-- Content Section -->
+<section class="content-section">
+    <p class="paragraph">
+        We are a group of young, energetic, and innovative professionals driven by passion, not corporate norms. We value our clients' hard-earned money and understand the importance of delivering results that matter. With dedication, creativity, and integrity, we work closely with every client to turn their vision into reality, ensuring they receive the best solutions for their business.
+    </p>
+
+   
+    <h2>Watch the video below (Autoplay)</h2>
+
+<!-- Video element -->
+<video width="640" height="420" autoplay muted controls>
+    <source src="images/video_mn.mp4" type="video/mp4">
+    <!-- Fallback text if the browser doesn't support video -->
+    Your browser does not support the video tag.
+</video>
+</section>
+
+
+<!-- Zigzag Layout Section -->
+<section id ="aboutus">
+<section class="about-us">
+    <div class="about-us-container">
+        <h1 class="about-us-container">About Us</h1>
+        <div class="about-us-item left">
+            <img src="images/abu1.jpg" alt="About Us Image 1" class="fade-in">
+            <div class="about-us-text fade-in">
+                <h2>Our Story</h2>
+                <p>Founded with a passion to help small businesses thrive in the digital age, MICRONEST began with a simple mission,
+                    to provide affordable, high-quality digital services to those who need it most. Our journey started when we
+                    recognized that many small businesses struggled to build an online presence due to high costs and complex solutions.
+                    Seeing this gap, we committed ourselves to delivering professional websites, mobile apps, and creative graphic
+                    designs at prices that fit within small business budgets</p>
+            </div>
+        </div>
+
+        <div class="about-us-item right">
+            <img src="images/misso.jpg" alt="About Us Image 2" class="fade-in">
+            <div class="about-us-text fade-in">
+                <h2>Our Mission</h2>
+                <p>Our mission is to empower small businesses by providing affordable, high-quality digital solutions.
+                    We are committed to delivering professional websites, mobile apps, and creative graphic designs
+                    tailored to the unique needs of our clients. Through innovation, personalized service, and a
+                    dedication to customer success, we aim to make digital transformation accessible to businesses of all sizes.</p>
+            </div>
+        </div>
+        
+        <div class="about-us-item left">
+            <img src="images/ovis.jpg" alt="About Us Image 3" class="fade-in">
+            <div class="about-us-text fade-in">
+                <h2>Our Vision</h2>
+                <p>Our vision is to be the go-to digital partner for small businesses, enabling them to thrive in an increasingly digital world.
+                    We aspire to lead the industry in providing affordable, reliable, and innovative digital solutions, helping businesses
+                    build their online presence and achieve long-term growth.</p>
+            </div>
+        </div>
+
+        <div class="about-us-item right">
+            <img src="images/oval.jpg" alt="About Us Image 2" class="fade-in">
+            <div class="about-us-text fade-in">
+                <h2>Our Values</h2>
+                <p>At our MICRONEST, we prioritize collaboration, flexibility, and autonomy, fostering an environment where diverse skills
+                    unite to drive innovation. Transparency and open communication are at the core of our values, building trust within our team
+                    and with clients. We embrace continuous improvement and creativity, encouraging experimentation while nurturing a supportive
+                    community where everyone can thrive together.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+
+
+<section id="contactus">
+<section class="about-us">
+    <div class="services-heading">
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+        <!-- Left side: Contact form -->
+        <div class="contact-form">
+            <form action="#" method="post">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Your mobile number" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="purpose">Purpose</label>
+                <textarea id="purpose" name="purpose" rows="4" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+        <!-- Right side: Address and contact details -->
+        <div class="contact-details">
+            <div class="info-box">
+                <h3>Address</h3>
+                <p>MicroNest office, Road no : 4, KPHB<br>Hyderabad, Telangana, 500082</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Contact Details</h3>
+                <p>Phone: +91 7569006737</p>
+                <p>Email:<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtDsTnLNpDnjMTDJQPLCxdgRHKXrqXPhsnZtptVxhrJlpllZXrtKLsjKjWGrXDnqjHtkTBXL" target="_blank"> micronestss@gmail.com</a></p>
+                
+            </div>
+
+            <div class="info-box">
+                <h3>Location</h3>
+                <p><a href="https://www.google.com/maps/place/Ratnagiri+Filter+Coffee/@17.4904214,78.3939289,666m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bcb91160541ab37:0x66d3927be9fcd518!8m2!3d17.4904163!4d78.3965038!16s%2Fg%2F11sl_81h0v?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Find me on Google Maps</a></p>
+            </div>
+
+            <div class="info-box">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">LinkedIn</a> | 
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
